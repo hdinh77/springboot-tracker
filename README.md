@@ -1,6 +1,8 @@
 # springboot-tracker
 Created by Heather Dinh
 
+![Image of COVID-19 Tracker](https://github.com/hdinh77/springboot-tracker/image.jpg)
+
 ## TO RUN
  1. Download repository and change directory into its location
  2. Make sure you have your JAVA_HOME environment variable pointing to installation of Java and Maven is installed
