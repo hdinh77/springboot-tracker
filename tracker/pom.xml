@@ -12,7 +12,7 @@
 	<artifactId>tracker</artifactId>
 	<version>1.0.2 RELEASE</version>
 	<name>tracker</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Coronavirus Tracker</description>
 
 	<properties>
 		<java.version>12</java.version>

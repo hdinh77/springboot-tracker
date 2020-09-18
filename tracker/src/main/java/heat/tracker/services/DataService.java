@@ -21,6 +21,9 @@ public class DataService {
 	private static String DATA_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv";
 	private List<LocationStats> allStats = new ArrayList<>();
 
+	public List<LocationStats> getAllStats() {
+		return this.allStats;
+	}
 
 	@PostConstruct
 	@Scheduled(cron = "* * 1 * * *")
@@ -45,14 +48,18 @@ public class DataService {
 			// System.out.println(key);
 
 			LocationStats location = new LocationStats();
+			location.setCity(record.get("Admin2"));
 			location.setState(record.get("Province_State"));
-			location.setCountry(record.get("Country_Region"));
-			location.setLatestTotalCases(Integer.parseInt(record.get(record.size() - 1)));
+			// location.setCountry(record.get("Country_Region"));
+			int latestCases = Integer.parseInt(record.get(record.size() - 1));
+			int prevCases = Integer.parseInt(record.get(record.size() - 2));
+			location.setLatestTotalCases(latestCases);
+			location.setDiffFromPrevDay(latestCases - prevCases);
 
-			System.out.println(location);
 			newStats.add(location);
 		}
 
 		this.allStats = newStats;
 	}
 }
+
