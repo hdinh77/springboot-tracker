@@ -1,8 +1,7 @@
 # springboot-tracker
 Created by Heather Dinh
 
-<img src="http://github.com/hdinh77.springboot-tracker/image.jpg">
-![image](image.jpg)
+<img src="https://github.com/hdinh77/springboot-tracker/blob/master/image.JPG">
 
 ## TO RUN
  1. Download repository and change directory into its location
@@ -67,7 +66,6 @@ Created by Heather Dinh
  - .stream() converts to a stream that is readable to console
  - .mapToInt(stat->stat.getLatestTotalCases()) gets each latest case and turns it into an int
  - .sum() adds all these cases together
- - <hr> is a horizontal ruler
 
 
 ## Maven
