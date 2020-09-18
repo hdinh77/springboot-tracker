@@ -1,7 +1,7 @@
 # springboot-tracker
 Created by Heather Dinh
 
-![Image of COVID-19 Tracker](https://github.com/hdinh77/springboot-tracker/image.jpg)
+![Image of COVID-19 Tracker](image.jpg)
 
 ## TO RUN
  1. Download repository and change directory into its location
